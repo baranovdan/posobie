@@ -1,0 +1,73 @@
+\documentclass[14pt,a4paper,openany,twoside]{extbook}
+%\usepackage{pscyr}
+\usepackage{mathtext}
+\usepackage[T2A]{fontenc}
+%\usepackage[cp866]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{amsfonts,amssymb,amscd,amsmath,amsthm,cite}
+\usepackage[lmargin=2.7cm,rmargin=2.7cm,top=2.7cm, bottom=2.5cm]{geometry}
+%\usepackage[dvips]{graphicx}
+\usepackage{graphicx,wrapfig}
+\usepackage{floatflt}
+\usepackage{fancyhdr}
+\usepackage{indentfirst}
+\usepackage[centerlast,small]{caption2}
+%\usepackage{ccaption} 
+\pagestyle{fancyplain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{definition}{Определение}
+\newtheorem{lemma}{Лемма}
+\newtheorem{corollary}{Следствие}
+%\newtheorem{remark}{Замечание}
+\newtheorem{exercise}{Упражнение}
+\numberwithin{equation}{chapter}\numberwithin{theorem}{chapter} \numberwithin{section}{chapter}
+\numberwithin{lemma}{chapter} \numberwithin{definition}{chapter} \numberwithin{corollary}{chapter}
+%\numberwithin{remark}{chapter}
+\numberwithin{exercise}{chapter} \numberwithin{figure}{chapter}
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}.}
+\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}
+\renewcommand{\thetheorem}{\thechapter.\arabic{theorem}}
+\renewcommand{\thelemma}{\thechapter.\arabic{lemma}}
+\renewcommand{\thecorollary}{\thechapter.\arabic{corollary}}
+%\renewcommand{\theremark}{\thechapter.\arabic{remark}}
+\renewcommand{\thedefinition}{\thechapter.\arabic{definition}}
+\renewcommand{\theexercise}{\thechapter.\arabic{exercise}}
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+\renewcommand{\captionlabeldelim}{.}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcounter{remark}
+\numberwithin{remark}{lemma}
+\newcommand{\remark}{\par\noindent\stepcounter{remark}{\bf Замечание \arabic{remark}}.} \DeclareMathOperator{\re}{Re}\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\diag}{diag} \DeclareMathOperator{\grad}{grad}\DeclareMathOperator{\tr}{tr} \DeclareMathOperator*{\M}{M}
+\DeclareMathOperator{\Ln}{Ln} \DeclareMathOperator{\sgn}{sgn}\newcommand{\ImUn}{\mathfrak{i}}
+\allowdisplaybreaks
+%\nofiles
+\begin{document}
+\setcounter{remark}{1}
+
+%\renewcommand{\chaptername}{Лекция}
+%\input Burd_file1.tex %\input booktitl.tex
+%\newpage
+%\thispagestyle{empty}
+%\input{Burd_referat.tex}
+\newpage
+\thispagestyle{empty}
+\renewcommand{\contentsname}{{\usefont{T2A}{fac}{m}{n}Оглавление}}
+ \lhead[\thepage]{Оглавление} \rhead[Оглавление]{\thepage} \cfoot{} \addtocontents{toc}{\protect\thispagestyle{empty}}
+\tableofcontents
+\newpage\thispagestyle{empty}\lhead[]{}\rhead[]{} \cfoot{}
+\input vved.tex
+%\input Chapter_1.tex
+%\input Chapter_2.tex
+%\input Chapter_3.tex
+%\input Chapter_4.tex
+%\input Chapter_5.tex
+%\input Chapter_6.tex
+\input Chapter_7.tex
+%\input Chapter_8.tex
+%\input Chapter_9.tex
+\input zakl.tex
+\input biblio.tex 
+
+\end{document}
